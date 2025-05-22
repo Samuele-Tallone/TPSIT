@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Auto Sportive in Vendita</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js"></script>
+</head>
+<body>
+
+<header>
+  <h1>Vendita Auto Sportive</h1>
+</header>
+
+<div class="main">
+  <div class="container">
+    <!-- Porsche 911 -->
+    <div class="car-card" onclick="openPopup('911')">
+      <img src="https://images.pexels.com/photos/358070/pexels-photo-358070.jpeg" alt="Porsche 911 Carrera S">
+      <div class="car-details">
+        <h2>Porsche 911 Carrera S</h2>
+        <p>Eleganza e prestazioni, motore boxer da 450 CV e trazione posteriore.</p>
+        <p class="price">€145.000</p>
+      </div>
+    </div>
+
+    <!-- Audi R8 -->
+    <div class="car-card" onclick="openPopup('r8')">
+      <img src="https://images.pexels.com/photos/1149831/pexels-photo-1149831.jpeg" alt="Audi R8">
+      <div class="car-details">
+        <h2>Audi R8 V10</h2>
+        <p>Motore V10 aspirato, trazione integrale quattro e una linea inconfondibile.</p>
+        <p class="price">€185.000</p>
+      </div>
+    </div>
+    <!-- Ferrari 488 -->
+<div class="car-card" onclick="openPopup('ferrari488')">
+  <img src="https://images.pexels.com/photos/164634/pexels-photo-164634.jpeg" alt="Ferrari 488 GTB">
+  <div class="car-details">
+    <h2>Ferrari 488 GTB</h2>
+    <p>Motore V8 turbo da 670 CV, prestazioni estreme e design italiano inconfondibile.</p>
+    <p class="price">€250.000</p>
+  </div>
+</div>
+
+<!-- Lamborghini Huracán -->
+<div class="car-card" onclick="openPopup('lamboHuracan')">
+  <img src="https://images.pexels.com/photos/210019/pexels-photo-210019.jpeg" alt="Lamborghini Huracán EVO">
+  <div class="car-details">
+    <h2>Lamborghini Huracán EVO</h2>
+    <p>V10 aspirato da 640 CV, design aggressivo e trazione integrale performante.</p>
+    <p class="price">€280.000</p>
+  </div>
+</div>
+
+<!-- McLaren 720S -->
+<div class="car-card" onclick="openPopup('mclaren720s')">
+  <img src="https://images.pexels.com/photos/1234567/pexels-photo-1234567.jpeg" alt="McLaren 720S">
+  <div class="car-details">
+    <h2>McLaren 720S</h2>
+    <p>Supercar inglese con motore V8 biturbo da 720 CV e aerodinamica avanzata.</p>
+    <p class="price">€310.000</p>
+  </div>
+</div>
+
+<!-- Aston Martin DB11 -->
+<div class="car-card" onclick="openPopup('astonMartin')">
+  <img src="https://images.pexels.com/photos/1179833/pexels-photo-1179833.jpeg" alt="Aston Martin DB11">
+  <div class="car-details">
+    <h2>Aston Martin DB11</h2>
+    <p>Eleganza britannica, motore V12 da 600 CV e lusso raffinato.</p>
+    <p class="price">€200.000</p>
+  </div>
+</div>
+
+<!-- Nissan GT-R Nismo -->
+<div class="car-card" onclick="openPopup('nissanGTR')">
+  <img src="https://images.pexels.com/photos/356830/pexels-photo-356830.jpeg" alt="Nissan GT-R Nismo">
+  <div class="car-details">
+    <h2>Nissan GT-R Nismo</h2>
+    <p>Sportiva giapponese con motore V6 biturbo da 600 CV e tecnologia avanzata.</p>
+    <p class="price">€150.000</p>
+  </div>
+</div>
+
+</div>
+
+  <aside class="sidebar">
+    <h2>Info Venditore</h2>
+    <p><strong>Zona:</strong> Cuneo (CN)</p>
+    <p><strong>Orari:</strong> Lun-Sab: 9:00 - 18:00</p>
+    <p><strong>Disponibilità:</strong> Prova su strada su appuntamento</p>
+
+    <div class="contact">
+      <h3>Contattaci</h3>
+      <p>Email: info@autosportivecuneo.it</p>
+      <p>Telefono: +39 320 456 7890</p>
+    </div>
+  </aside>
+  <div id="popup" class="popup hidden">
+  <div class="popup-content">
+    <span class="close-btn" onclick="closePopup()">&times;</span>
+
+    <div class="popup-left">
+      <div class="carousel" id="carousel"></div>
+      <div class="carousel-nav">
+        <button onclick="prevSlide()">&#10094;</button>
+        <button onclick="nextSlide()">&#10095;</button>
+      </div>
+    </div>
+
+    <div class="popup-right">
+      <h2 id="popup-title"></h2>
+      <p id="popup-description"></p>
+      <p class="price" id="popup-price"></p>
+    </div>
+  </div>
+</div>
+
+
+
+</body>
+</html>
