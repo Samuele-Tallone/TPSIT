@@ -4,9 +4,9 @@ const carData = {
     description: "Eleganza e prestazioni, motore boxer da 450 CV, trazione posteriore e uno stile iconico.",
     price: "€145.000",
     images: [
-      "https://images.pexels.com/photos/358070/pexels-photo-358070.jpeg",
-      "https://images.pexels.com/photos/170811/pexels-photo-170811.jpeg",
-      "https://images.pexels.com/photos/358070/pexels-photo-358070.jpeg"
+      "https://i.postimg.cc/BnnH5bYn/911.jpg",
+      "https://i.postimg.cc/0NLSqf8z/9111.jpg",
+      "https://i.postimg.cc/hGJmwwqF/91111.jpg"
     ]
   },
   'r8': {
@@ -14,9 +14,9 @@ const carData = {
     description: "Motore V10 aspirato, trazione integrale quattro e una linea inconfondibile.",
     price: "€185.000",
     images: [
-      "https://images.pexels.com/photos/1149831/pexels-photo-1149831.jpeg",
-      "https://images.pexels.com/photos/3366964/pexels-photo-3366964.jpeg",
-      "https://images.pexels.com/photos/358070/pexels-photo-358070.jpeg"
+      "https://i.postimg.cc/C5p6dk41/r88.jpg",
+      "https://i.postimg.cc/yxhpRxfT/r8888.jpg",
+      "https://i.postimg.cc/5yJnf1xQ/r8.jpg"
     ]
   },
   'ferrari488': {
@@ -24,9 +24,9 @@ const carData = {
     description: "Motore V8 turbo da 670 CV, prestazioni estreme e design italiano inconfondibile.",
     price: "€250.000",
     images: [
-      "https://images.pexels.com/photos/164634/pexels-photo-164634.jpeg",
-      "https://images.pexels.com/photos/2397659/pexels-photo-2397659.jpeg",
-      "https://images.pexels.com/photos/246232/pexels-photo-246232.jpeg"
+      "https://i.postimg.cc/ht84G1bJ/ferrari488.jpg",
+      "https://i.postimg.cc/SKySYYDg/ferrari4888.jpg",
+      "https://i.postimg.cc/5tnxB9rb/ferrari48888.jpg"
     ]
   },
   'lamboHuracan': {
@@ -34,9 +34,9 @@ const carData = {
     description: "V10 aspirato da 640 CV, design aggressivo e trazione integrale performante.",
     price: "€280.000",
     images: [
-      "https://images.pexels.com/photos/210019/pexels-photo-210019.jpeg",
-      "https://images.pexels.com/photos/1791995/pexels-photo-1791995.jpeg",
-      "https://images.pexels.com/photos/257006/pexels-photo-257006.jpeg"
+      "https://i.postimg.cc/Ghdd5y1d/lambo.jpg",
+      "https://i.postimg.cc/6pQw9x3P/lamboo.jpg",
+      "https://i.postimg.cc/Jzd80YHz/lambooo.jpg"
     ]
   },
   'mclaren720s': {
@@ -44,9 +44,9 @@ const carData = {
     description: "Supercar inglese con motore V8 biturbo da 720 CV e aerodinamica avanzata.",
     price: "€310.000",
     images: [
-      "https://images.pexels.com/photos/1234567/pexels-photo-1234567.jpeg",
-      "https://images.pexels.com/photos/1149832/pexels-photo-1149832.jpeg",
-      "https://images.pexels.com/photos/1149833/pexels-photo-1149833.jpeg"
+      "https://i.postimg.cc/8zgW3wzs/mc.jpg",
+      "https://i.postimg.cc/zGwW1Wy7/mcccc.jpg",
+      "https://i.postimg.cc/1z9FRt6Q/mccccc.jpg"
     ]
   },
   'astonMartin': {
@@ -54,9 +54,9 @@ const carData = {
     description: "Eleganza britannica, motore V12 da 600 CV e lusso raffinato.",
     price: "€200.000",
     images: [
-      "https://images.pexels.com/photos/1179833/pexels-photo-1179833.jpeg",
-      "https://images.pexels.com/photos/3429364/pexels-photo-3429364.jpeg",
-      "https://images.pexels.com/photos/1334601/pexels-photo-1334601.jpeg"
+      "https://i.postimg.cc/L6pLQNX5/ast.jpg",
+      "https://i.postimg.cc/RZCf4hwz/astt.jpg",
+      "https://i.postimg.cc/Hs95qXc2/asttt.jpg"
     ]
   },
   'nissanGTR': {
@@ -64,9 +64,9 @@ const carData = {
     description: "Sportiva giapponese con motore V6 biturbo da 600 CV e tecnologia avanzata.",
     price: "€150.000",
     images: [
-      "https://images.pexels.com/photos/356830/pexels-photo-356830.jpeg",
-      "https://images.pexels.com/photos/1230139/pexels-photo-1230139.jpeg",
-      "https://images.pexels.com/photos/1326189/pexels-photo-1326189.jpeg"
+      "https://i.postimg.cc/9FD5Stn3/jdm.jpg",
+      "https://i.postimg.cc/m2KfGzvP/jdmm.jpg",
+      "https://i.postimg.cc/x1HrjjQt/jdmmm.jpg"
     ]
   }
 };
@@ -118,3 +118,21 @@ function prevSlide() {
   currentSlide = (currentSlide - 1 + slides.length) % slides.length;
   showSlide(currentSlide);
 }
+document.addEventListener('DOMContentLoaded', function() {
+  document.getElementById('searchInput').addEventListener('input', function () {
+    const query = this.value.toLowerCase();
+    const cards = document.querySelectorAll('.car-card');
+
+    cards.forEach(function (card) {
+      const title = card.querySelector('h2').textContent.toLowerCase();
+      const description = card.querySelector('p').textContent.toLowerCase();
+      const price = card.querySelector('.price').textContent.toLowerCase();
+
+      if (title.includes(query) || description.includes(query) || price.includes(query)) {
+        card.style.display = 'block';
+      } else {
+        card.style.display = 'none';
+      }
+    });
+  });
+});

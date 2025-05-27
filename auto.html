@@ -34,13 +34,16 @@
           </li>
         </ul>
         
+        <div class="search-container ms-auto me-2">
+          <input id="searchInput" class="search-bar" type="search" placeholder="Cerca un'auto..." aria-label="Cerca">
+          <i class="fas fa-search search-icon"></i>
+        </div>
       </div>
     </div>
   </nav>
 </header>
-<h2 style="margin-left: 1rem;"><br><strong>Best Seller</strong></h2>
 <div class="main">
-  <div class="container">
+  <div class="container2">
     <div class="car-card" onclick="openPopup('911')">
       <img src="https://i.postimg.cc/BnnH5bYn/911.jpg" alt="Porsche 911 Carrera S">
       <div class="car-details">
@@ -76,20 +79,34 @@
         <p class="price">€280.000</p>
       </div>
     </div>
-  </div>
 
-  <aside class="sidebar">
-    <h2>Info Venditore</h2>
-    <p><strong>Zona:</strong> Cuneo (CN)</p>
-    <p><strong>Orari:</strong> Lun-Sab: 9:00 - 18:00</p>
-    <p><strong>Disponibilità:</strong> Prova su strada su appuntamento</p>
-
-    <div class="contact">
-      <h3>Contattaci</h3>
-      <p>Email: info@autosportivecuneo.it</p>
-      <p>Telefono: +39 320 456 7890</p>
+    <div class="car-card" onclick="openPopup('mclaren720s')">
+      <img src="https://i.postimg.cc/zGwW1Wy7/mcccc.jpg" alt="McLaren 720S">
+      <div class="car-details">
+        <h2>McLaren 720S</h2>
+        <p>Supercar inglese con motore V8 biturbo da 720 CV e aerodinamica avanzata.</p>
+        <p class="price">€310.000</p>
+      </div>
     </div>
-  </aside>
+
+    <div class="car-card" onclick="openPopup('astonMartin')">
+      <img src="https://i.postimg.cc/RZCf4hwz/astt.jpg" alt="Aston Martin DB11">
+      <div class="car-details">
+        <h2>Aston Martin DB11</h2>
+        <p>Eleganza britannica, motore V12 da 600 CV e lusso raffinato.</p>
+        <p class="price">€200.000</p>
+      </div>
+    </div>
+
+    <div class="car-card" onclick="openPopup('nissanGTR')">
+      <img src="https://i.postimg.cc/m2KfGzvP/jdmm.jpg" alt="Nissan GT-R Nismo">
+      <div class="car-details">
+        <h2>Nissan GT-R Nismo</h2>
+        <p>Sportiva giapponese con motore V6 biturbo da 600 CV e tecnologia avanzata.</p>
+        <p class="price">€150.000</p>
+      </div>
+    </div>
+  </div>
 
   <div id="popup" class="popup hidden">
     <div class="popup-content">
